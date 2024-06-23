@@ -36,7 +36,8 @@ export class AuthGuard implements CanActivate {
       // request['JWT']= token;
 
     } catch (error) {
-      throw new UnauthorizedException(error.response.message);
+      // console.log(error);      
+      throw new UnauthorizedException();
     }
 
     return true;
